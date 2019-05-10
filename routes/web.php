@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/grocery', function (){
+	return view('grocery');
+});
+Route::post('/grocery/post', 'GroceryController@store')->name('crea');
