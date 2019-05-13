@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/grocery', function (){
-	return view('grocery');
-});
-Route::post('/grocery/post', 'GroceryController@store')->name('crea');
+Route::resource('ajax-crud', 'AjaxController');
+
+// Route::get('/grocery', function (){
+// 	return view('grocery');
+// });
+// Route::get('/grocery/mostra', 'GroceryController@index')->name('mostra');
+// Route::post('/grocery/post', 'GroceryController@store')->name('crea');
+// Route::delete('/grocery/esborra/{id}', 'GroceryController@destroy')->name('esborra');
